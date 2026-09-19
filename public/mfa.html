@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEVILTOKEN — 2FA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="mfa-page">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <polygon points="25,35 12,2 38,22" fill="white"/>
+          <polygon points="75,35 88,2 62,22" fill="white"/>
+          <ellipse cx="50" cy="55" rx="28" ry="27" fill="white"/>
+          <rect x="37" y="71" width="26" height="13" rx="2" fill="white"/>
+          <rect x="39" y="71" width="5" height="9" fill="black"/>
+          <rect x="47" y="71" width="5" height="9" fill="black"/>
+          <rect x="55" y="71" width="5" height="9" fill="black"/>
+          <ellipse cx="40" cy="52" rx="6" ry="7" fill="black"/>
+          <ellipse cx="60" cy="52" rx="6" ry="7" fill="black"/>
+          <ellipse cx="40" cy="52" rx="3" ry="4" fill="#ff2222"/>
+          <ellipse cx="60" cy="52" rx="3" ry="4" fill="#ff2222"/>
+          <path d="M47 61 L53 61 L50 66 Z" fill="black"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-name">DEVILTOKEN</div>
+        <div class="brand-tag">Two-Factor Authentication</div>
+      </div>
+    </div>
+
+    <div class="page-title">// ยืนยัน 2FA — ชั้นป้องกันที่ 2</div>
+
+    <div class="card">
+      <div class="mfa-tabs">
+        <button class="mfa-tab active" id="tab-totp" onclick="switchTab('totp')">
+          TOTP CODE
+        </button>
+        <button class="mfa-tab" id="tab-backup" onclick="switchTab('backup')">
+          BACKUP CODE
+        </button>
+      </div>
+
+      <div id="totp-section">
+        <div class="form-group">
+          <label>6-Digit Auth Code</label>
+          <input type="text" id="totp-code" placeholder="000000"
+            maxlength="6" inputmode="numeric" autocomplete="one-time-code" />
+        </div>
+      </div>
+
+      <div id="backup-section" class="hidden">
+        <div class="form-group">
+          <label>Backup Code</label>
+          <input type="text" id="backup-code" placeholder="xxxxx-xxxxx" />
+        </div>
+      </div>
+
+      <div class="error-msg" id="mfa-err"></div>
+
+      <button class="btn-primary" id="btn-mfa" onclick="doMFA()">
+        ▶ VERIFY & EXTRACT
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

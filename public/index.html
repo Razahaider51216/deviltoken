@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEVILTOKEN — WARNING</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='25,35 12,2 38,22' fill='white'/%3E%3Cpolygon points='75,35 88,2 62,22' fill='white'/%3E%3Cellipse cx='50' cy='55' rx='28' ry='27' fill='white'/%3E%3Crect x='37' y='71' width='26' height='13' rx='2' fill='white'/%3E%3Crect x='39' y='71' width='5' height='9' fill='black'/%3E%3Crect x='47' y='71' width='5' height='9' fill='black'/%3E%3Crect x='55' y='71' width='5' height='9' fill='black'/%3E%3Cellipse cx='40' cy='52' rx='6' ry='7' fill='black'/%3E%3Cellipse cx='60' cy='52' rx='6' ry='7' fill='black'/%3E%3Cellipse cx='40' cy='52' rx='3' ry='4' fill='%23ff0000'/%3E%3Cellipse cx='60' cy='52' rx='3' ry='4' fill='%23ff0000'/%3E%3Cpath d='M47 61 L53 61 L50 66 Z' fill='black'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="warning-page">
+    <div class="warning-icon">⚠</div>
+    <div class="warning-title">⚠ DEVILTOKEN ⚠<br />ห้ามเข้าถึง</div>
+
+    <div class="warning-box">
+      <p>
+        ระบบนี้ถูกสร้างขึ้นเพื่อการทดสอบและวิจัยด้านความปลอดภัยเท่านั้น<br/>
+        การเข้าถึงโดยไม่ได้รับอนุญาตถือเป็นความผิดทางอาญา<br/><br/>
+        <strong>ห้ามใช้งานเพื่อวัตถุประสงค์ที่ผิดกฎหมาย</strong><br/>
+        ทุกการกระทำจะถูกบันทึกและสามารถถูกตรวจสอบได้
+      </p>
+      <div class="line">
+        UNAUTHORIZED ACCESS IS STRICTLY PROHIBITED · ALL ACTIONS ARE LOGGED
+      </div>
+    </div>
+
+    <div class="warning-counter" id="w-counter">10</div>
+    <div class="warning-counter-label">SECONDS BEFORE ACCESS GRANTED</div>
+
+    <button class="btn-enter" id="btn-enter" onclick="proceed()">
+      ▶ เข้าใช้งาน / ENTER
+    </button>
+  </div>
+
+  <script>
+    let count = 10;
+    const counter = document.getElementById('w-counter');
+    const btn = document.getElementById('btn-enter');
+
+    const t = setInterval(() => {
+      count--;
+      counter.textContent = count;
+      if (count <= 0) {
+        clearInterval(t);
+        counter.textContent = '0';
+        btn.classList.add('visible');
+      }
+    }, 1000);
+
+    function proceed() {
+      window.location.href = '/login.html';
+    }
+  </script>
+</body>
+</html>

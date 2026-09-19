@@ -1,0 +1,11 @@
+name = "deviltoken"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./public"
+
+[[kv_namespaces]]
+binding = "CATCH_LOG"
+id = "3ec4a85e98ce4ca4a0fb16782f249988"

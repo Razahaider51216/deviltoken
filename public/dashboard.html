@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEVILTOKEN — EXTRACTED</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="dashboard-page">
+
+    <!-- Header -->
+    <div class="dash-header">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <polygon points="25,35 12,2 38,22" fill="white"/>
+            <polygon points="75,35 88,2 62,22" fill="white"/>
+            <ellipse cx="50" cy="55" rx="28" ry="27" fill="white"/>
+            <rect x="37" y="71" width="26" height="13" rx="2" fill="white"/>
+            <rect x="39" y="71" width="5" height="9" fill="black"/>
+            <rect x="47" y="71" width="5" height="9" fill="black"/>
+            <rect x="55" y="71" width="5" height="9" fill="black"/>
+            <ellipse cx="40" cy="52" rx="6" ry="7" fill="black"/>
+            <ellipse cx="60" cy="52" rx="6" ry="7" fill="black"/>
+            <ellipse cx="40" cy="52" rx="3" ry="4" fill="#ff2222"/>
+            <ellipse cx="60" cy="52" rx="3" ry="4" fill="#ff2222"/>
+            <path d="M47 61 L53 61 L50 66 Z" fill="black"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">DEVILTOKEN</div>
+          <div class="brand-tag">TOKEN EXTRACTED</div>
+        </div>
+      </div>
+
+      <div class="timeout-display">
+        <div class="timeout-label">SESSION TIMEOUT</div>
+        <div class="timeout-timer" id="timeout-timer">05:00</div>
+      </div>
+    </div>
+
+    <!-- User card -->
+    <div>
+      <div class="section-label">// ข้อมูลผู้ใช้</div>
+      <div class="user-card">
+        <div class="avatar-wrap">
+          <img id="u-avatar" src="" onerror="this.style.display='none'" alt="" />
+          <div class="avatar-fallback" id="u-avatar-fb">?</div>
+        </div>
+        <div class="user-details">
+          <div class="user-name" id="u-name">—</div>
+          <div class="user-tag" id="u-tag">—</div>
+          <div class="user-badges" id="u-badges"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Token -->
+    <div>
+      <div class="section-label">// TOKEN</div>
+      <div class="token-box">
+        <div class="token-value" id="token-value">กำลังดึง token...</div>
+      </div>
+      <div class="token-actions">
+        <button class="btn-copy" id="btn-copy" onclick="copyToken()">
+          ⧉ COPY TOKEN
+        </button>
+        <button class="btn-regen" onclick="reloadInfo()">
+          ↺ REFRESH
+        </button>
+      </div>
+    </div>
+
+    <!-- Info grid -->
+    <div>
+      <div class="section-label">// ข้อมูลเพิ่มเติม</div>
+      <div class="info-grid">
+        <div class="info-cell">
+          <div class="info-key">User ID</div>
+          <div class="info-val" id="i-id">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Email</div>
+          <div class="info-val" id="i-email">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Phone</div>
+          <div class="info-val" id="i-phone">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Verified</div>
+          <div class="info-val" id="i-verified">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">MFA Enabled</div>
+          <div class="info-val" id="i-mfa">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Nitro</div>
+          <div class="info-val" id="i-nitro">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Servers</div>
+          <div class="info-val" id="i-guilds">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Servers Owned</div>
+          <div class="info-val" id="i-owned">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Locale</div>
+          <div class="info-val" id="i-locale">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Account Created</div>
+          <div class="info-val" id="i-created">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Flags</div>
+          <div class="info-val" id="i-flags">—</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-key">Nitro Expires</div>
+          <div class="info-val" id="i-nitro-exp">—</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status bar -->
+    <div class="status-bar">
+      <span><span class="status-dot"></span>CONNECTED · DISCORD API v10</span>
+      <span id="st-time">—</span>
+      <span>DEVILTOKEN v1.0</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
